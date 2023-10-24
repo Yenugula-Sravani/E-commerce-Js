@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up Or register user</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../script/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container-fluid bg-primary text-light py-3">
+      <header class="text-center">
+        <h3 class="display-6">
+          Please complete the below details for Sign into website
+        </h3>
+      </header>
+    </div>
+    <section class="container my-2 bg-black w-50 text-light p-2">
+      <div class="form row g-3 p-3">
+        <div class="col-md-4">
+          <label class="form-label">Name of the user</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="ex:sravani"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="xyz@gmail.com"
+            required
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">password</label>
+        <input type="password" class="form-control" id="password" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"> confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="cpassword"
+          placeholder="ex:123@.."
+        />
+      </div>
+      <div>
+        <p>Already an user? <a href="login.html">Sign In</a></p>
+      </div>
+      <p id="error" class="text-danger"></p>
+      <div class="col-12">
+        <button class="btn btn-success w-100 py-2" onclick="signUpHandler()">
+          Sign Up
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!--  <label for="validationDefault01" class="form-label">Name of the user</label>
+             <input type="text" class="form-control" id="name" placeholder="ex:sravani"  required>
+           </div>
+           <div class="col-md-4">
+             <label for="validationDefault02" class="form-label">Email</label>
+             <input type="text" class="form-control" id="email" placeholder="xyz@gmail.com" required>
+           </div>
+           </div>
+         <div class="col-md-6">
+           <label for="inputEmail4" class="form-label">password</label>
+           <input type="email" class="form-control" id="password" >
+         </div>
+         <div class="col-md-6">
+           <label for="inputPassword4" class="form-label"> confirm Password</label>
+           <input type="password" class="form-control"  id="cpassword"  placeholder="ex:123@..">
+         </div> -->

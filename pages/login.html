@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../script/script.js" defer></script>
+  </head>
+  <body>
+    <!----------------------- Main Container -------------------------->
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <!----------------------- Login Container -------------------------->
+      <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <!--------------------------- Left Box ----------------------------->
+        <div
+          class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+          style="background: orchid"
+        >
+          <div class="featured-image mb-3">
+            <img
+              src="https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg?auto=compress&cs=tinysrgb&w=600"
+              class="img-fluid"
+              style="width: 250px"
+              height="250px;"
+            />
+          </div>
+          <p
+            class="text-white fs-2"
+            style="
+              font-family: 'Courier New', Courier, monospace;
+              font-weight: 600;
+              color: black;
+            "
+          >
+            Be our Customers
+          </p>
+          <small
+            class="text-white text-wrap text-center font-weight:400;"
+            style="width: 17rem; font-family: 'Courier New', Courier, monospace"
+            >please login and continue shopping</small
+          >
+        </div>
+        <!-------------------- ------ Right Box ---------------------------->
+
+        <div class="col-md-6 right-box">
+          <div class="row align-items-center">
+            <div class="header-text mb-4">
+              <h2>Hello</h2>
+              <p>We are happy to see you</p>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+              />
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+              />
+              <label for="password">Password</label>
+            </div>
+            <p id="error" class="text-danger"></p>
+            </div>
+            <div class="row">
+              <small>Don't have account? <a href="register.html">Sign Up</a></small>
+            </div>
+            <div class="input-group mb-3">
+              <button class="btn btn-lg btn-primary w-100 fs-6 py-2" onclick="signInHandler()">Sign In</button>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
