@@ -96,20 +96,20 @@ window.addEventListener("load", () => {
     localStorage.setItem("products", JSON.stringify(intialproducts));
   }
   console.log(location.pathname);
-  if (location.pathname === "/pages/index.html") {
+  if (location.pathname === "/Onlineshopping/pages/index.html") {
     loadcustomerproducts();
   }
-  if (location.pathname === "/pages/admin/index.html") {
+  if (location.pathname === "/Onlineshopping/pages/admin/index.html") {
     loadAdminHomePage();
   }
 
-  if (location.pathname === "/pages/cart.html") {
+  if (location.pathname === "/Onlineshopping/pages/cart.html") {
     renderCartItems();
   }
-  if (location.pathname === "/pages/orders.html") {
+  if (location.pathname === "/Onlineshopping/pages/orders.html") {
     renderOrderPage();
   }
-  if (location.pathname === "/pages/admin/orders.html") {
+  if (location.pathname === "/Onlineshopping/pages/admin/orders.html") {
     loadAdminOrders();
   }
 });
@@ -345,7 +345,7 @@ const loadAdminHomePage = () => {
 
 //editing function in admin page
 const editProductHandler = (id) => {
-  location.href = `/pages/admin/add_product.html?id=${id}`;
+  location.href = `/Onlineshopping/pages/admin/add_product.html?id=${id}`;
 };
 
 const urlparams = new URLSearchParams(window.location.search);
@@ -396,7 +396,7 @@ const addProductByAdmin = () => {
     });
   }
   localStorage.setItem("products", JSON.stringify(products));
-  location.href = "/pages/admin/index.html";
+  location.href = "/Onlineshopping/pages/admin/index.html";
 };
 
 //delete function in admin page
