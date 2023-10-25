@@ -96,20 +96,20 @@ window.addEventListener("load", () => {
     localStorage.setItem("products", JSON.stringify(intialproducts));
   }
   console.log(location.pathname);
-  if (location.pathname === "/Onlineshopping/pages/index.html") {
+  if (location.pathname === "/E-commerce-Js/pages/index.html") {
     loadcustomerproducts();
   }
-  if (location.pathname === "/Onlineshopping/pages/admin/index.html") {
+  if (location.pathname === "/E-commerce-Js/pages/admin/index.html") {
     loadAdminHomePage();
   }
 
-  if (location.pathname === "/Onlineshopping/pages/cart.html") {
+  if (location.pathname === "/E-commerce-Js/pages/cart.html") {
     renderCartItems();
   }
-  if (location.pathname === "/Onlineshopping/pages/orders.html") {
+  if (location.pathname === "/E-commerce-Js/pages/orders.html") {
     renderOrderPage();
   }
-  if (location.pathname === "/Onlineshopping/pages/admin/orders.html") {
+  if (location.pathname === "/E-commerce-Js/pages/admin/orders.html") {
     loadAdminOrders();
   }
 });
@@ -147,8 +147,8 @@ const signInHandler = () => {
     } else {
       sessionStorage.setItem("userId", loggedInUser.id);
       if (emailRef.value === "admin@admin.com")
-        location.replace("/Onlineshopping/pages/admin/index.html");
-      else location.replace("/Onlineshopping/pages/index.html");
+        location.replace("/E-commerce-Js/pages/admin/index.html");
+      else location.replace("/E-commerce-Js/pages/index.html");
     }
   } else {
     errorRef.innerText = "Email or password is empty";
@@ -184,7 +184,7 @@ const signUpHandler = () => {
       });
       localStorage.setItem("users", JSON.stringify(users));
       alert("logged in successfully");
-      location.href = "/Onlineshopping/pages/login.html";
+      location.href = "/E-commerce-Js/pages/login.html";
     } else {
       errorRef.innerText = "passwords mismatched!!!";
     }
@@ -195,7 +195,7 @@ const signUpHandler = () => {
 
 // user singout handler
 const userSignOutHandler = () => {
-  location.replace("/Onlineshopping/pages/login.html");
+  location.replace("/E-commerce-Js/pages/login.html");
 };
 
 //loading customer index.html
@@ -226,7 +226,7 @@ const addToCartHandler = (id) => {
   const product = products.find((product) => product.id === parseInt(id));
 
   if (!sessionStorage.getItem("userId")) {
-    location.href = "/Onlineshopping/pages/login.html";
+    location.href = "/E-commerce-Js/pages/login.html";
   } else {
     let userId = parseInt(sessionStorage.getItem("userId"));
     let cart = [];
@@ -269,7 +269,7 @@ const updateCart = () => {
         cartCountRef.innerText = `Cart - ${cartCount}`;
       } else cartCountRef.innerText = `Cart`;
     }
-  } else location.href = "/Onlineshopping/pages/login.html";
+  } else location.href = "/E-commerce-Js/pages/login.html";
 };
 
 //rendering cart items
@@ -309,7 +309,7 @@ const renderCartItems = () => {
       cartTableRef.innerHTML = body;
       totalRef.innerText = `Total - ₹ ${total}`;
     } else {
-      location.href = "/Onlineshopping/pages/login.html";
+      location.href = "/E-commerce-Js/pages/login.html";
     }
   }
 };
@@ -345,7 +345,7 @@ const loadAdminHomePage = () => {
 
 //editing function in admin page
 const editProductHandler = (id) => {
-  location.href = `/Onlineshopping/pages/admin/add_product.html?id=${id}`;
+  location.href = `/E-commerce-Js/pages/admin/add_product.html?id=${id}`;
 };
 
 const urlparams = new URLSearchParams(window.location.search);
@@ -396,7 +396,7 @@ const addProductByAdmin = () => {
     });
   }
   localStorage.setItem("products", JSON.stringify(products));
-  location.href = "/Onlineshopping/pages/admin/index.html";
+  location.href = "/E-commerce-Js/pages/admin/index.html";
 };
 
 //delete function in admin page
@@ -432,12 +432,12 @@ const checkOut = () => {
       localStorage.setItem("cart", JSON.stringify(otherUserCart));
       localStorage.setItem("orders", JSON.stringify(orders));
       updateCart();
-      location.href = "/Onlineshopping/pages/orders.html";
+      location.href = "/E-commerce-Js/pages/orders.html";
     } else {
-      location.href = "/Onlineshopping/pages/index.html";
+      location.href = "/E-commerce-Js/pages/index.html";
     }
   } else {
-    location.href = "/Onlineshopping/pages/login.html";
+    location.href = "/E-commerce-Js/pages/login.html";
   }
 };
 
@@ -473,10 +473,10 @@ const renderOrderPage = () => {
       }
       tablebodyref.innerHTML = body;
     } else {
-      location.href = "/Onlineshopping/pages/index.html";
+      location.href = "/E-commerce-Js/pages/index.html";
     }
   } else {
-    location.href = "/Onlineshopping/pages/login.html";
+    location.href = "/E-commerce-Js/pages/login.html";
   }
 };
 
