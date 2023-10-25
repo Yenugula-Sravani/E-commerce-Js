@@ -147,8 +147,8 @@ const signInHandler = () => {
     } else {
       sessionStorage.setItem("userId", loggedInUser.id);
       if (emailRef.value === "admin@admin.com")
-        location.replace("/pages/admin/index.html");
-      else location.replace("/pages/index.html");
+        location.replace("/Onlineshopping/pages/admin/index.html");
+      else location.replace("/Onlineshopping/pages/index.html");
     }
   } else {
     errorRef.innerText = "Email or password is empty";
@@ -184,7 +184,7 @@ const signUpHandler = () => {
       });
       localStorage.setItem("users", JSON.stringify(users));
       alert("logged in successfully");
-      location.href = "/pages/login.html";
+      location.href = "/Onlineshopping/pages/login.html";
     } else {
       errorRef.innerText = "passwords mismatched!!!";
     }
@@ -195,7 +195,7 @@ const signUpHandler = () => {
 
 // user singout handler
 const userSignOutHandler = () => {
-  location.replace("/pages/login.html");
+  location.replace("/Onlineshopping/pages/login.html");
 };
 
 //loading customer index.html
@@ -226,7 +226,7 @@ const addToCartHandler = (id) => {
   const product = products.find((product) => product.id === parseInt(id));
 
   if (!sessionStorage.getItem("userId")) {
-    location.href = "/pages/login.html";
+    location.href = "/Onlineshopping/pages/login.html";
   } else {
     let userId = parseInt(sessionStorage.getItem("userId"));
     let cart = [];
@@ -269,7 +269,7 @@ const updateCart = () => {
         cartCountRef.innerText = `Cart - ${cartCount}`;
       } else cartCountRef.innerText = `Cart`;
     }
-  } else location.href = "/pages/login.html";
+  } else location.href = "/Onlineshopping/pages/login.html";
 };
 
 //rendering cart items
@@ -309,7 +309,7 @@ const renderCartItems = () => {
       cartTableRef.innerHTML = body;
       totalRef.innerText = `Total - ₹ ${total}`;
     } else {
-      location.href = "/pages/login.html";
+      location.href = "/Onlineshopping/pages/login.html";
     }
   }
 };
@@ -432,12 +432,12 @@ const checkOut = () => {
       localStorage.setItem("cart", JSON.stringify(otherUserCart));
       localStorage.setItem("orders", JSON.stringify(orders));
       updateCart();
-      location.href = "/pages/orders.html";
+      location.href = "/Onlineshopping/pages/orders.html";
     } else {
-      location.href = "/pages/index.html";
+      location.href = "/Onlineshopping/pages/index.html";
     }
   } else {
-    location.href = "/pages/login.html";
+    location.href = "/Onlineshopping/pages/login.html";
   }
 };
 
@@ -473,10 +473,10 @@ const renderOrderPage = () => {
       }
       tablebodyref.innerHTML = body;
     } else {
-      location.href = "/pages/index.html";
+      location.href = "/Onlineshopping/pages/index.html";
     }
   } else {
-    location.href = "/pages/login.html";
+    location.href = "/Onlineshopping/pages/login.html";
   }
 };
 
