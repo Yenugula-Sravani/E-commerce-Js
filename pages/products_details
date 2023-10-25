@@ -32,7 +32,7 @@
   <body>
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="/E-commerce-Js/pages/index.html">Orders Page</a>
+          <a class="navbar-brand text-white" href="/E-commerce-Js/pages/orders.html">Orders Page</a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
